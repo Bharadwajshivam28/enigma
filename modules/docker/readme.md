@@ -32,6 +32,11 @@ go build -o enigma main.go
 ```
 
 ### To work with Docker commands run-
+- To generate .enigma file:
+  ```
+  ./enigma init
+  ```
+  
 - To Build and Tag:
   ```
   ./enigma bake
@@ -58,7 +63,7 @@ jobs:
     steps:
  
       - name: Build Docker Image
-        uses: clouddrove/enigma@v0.0.10
+        uses: Bharadwajshivam28/enigma@main
         with:
           command: bake
           DOCKER_IMAGE: ${{ env.DOCKER_IMAGE }}
@@ -68,7 +73,7 @@ jobs:
           BUILD_ARCHITECTURE: ${{ inputs.BUILD_ARCHITECTURE }}
 
       - name: Publish Docker Image
-        uses: clouddrove/enigma@v0.0.10
+        uses: Bharadwajshivam28/enigma@main
         with:
           command: publish
           DOCKER_IMAGE: ${{ env.DOCKER_IMAGE }}
