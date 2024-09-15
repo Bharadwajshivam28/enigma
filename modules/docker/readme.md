@@ -1,7 +1,7 @@
 ## To use Enigma for Docker
 
 1. Clone the repository
-`git clone https://github.com/clouddrove/enigma.git`
+`git clone https://github.com/Bharadwajshivam28/enigma.git`
 
 2. Set your values in `.enigma` file. To set values in `.enigma` just pass the values. This is an sample-
 ```
@@ -36,7 +36,7 @@ go build -o enigma main.go
   ```
   ./enigma init
   ```
-  
+
 - To Build and Tag:
   ```
   ./enigma bake
